@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- ✏️ EDIT HERE to change the praise text -->
+    <h2 class="praise-text">You are the most amazing person ever!</h2>
+
+    <!-- ✏️ EDIT HERE to replace the photo -->
+    <img src="aditi.jpeg" alt="Her photo" class="photo" />
+
+    <!-- ✏️ EDIT HERE to change the button text -->
+    <button id="loveButton">हमारे दिल की आवाज़!!💓</button>
+    <!-- This message appears when button is clicked -->
+    <div id="loveMessage" class="love-message">I love you ADITI/MADHU/HONEY 💞</div>
+  </div>
+
+  <script src="script.js"></script>
+ 
+<!-- Random praise line generator -->
+<script>
+  // Three short romantic lines
+  const praiseLines = [
+    `दूर है चांद
+     पास है पानी
+     मैं तो बिल्कुल
+     ठीक हूं तुम अपना बताओ रानी..!!`,
+    `आंखों पर आए जब जुल्फें तो हटा दिया करो 
+    अगर है मोहब्बत हमसे तो बता दिया करो..!!`,
+    `चलो शुरू करते हैं हम भी एक नई प्रेम कहानी मैं बनता हूं राजा 
+    क्या तुम बनोगी मेरी रानी..!!`
+  ];
+
+  // Pick one randomly and update the text
+  window.addEventListener("DOMContentLoaded", () => {
+    const praise = document.querySelector(".praise-text");
+    if (praise) {
+      const randomLine = praiseLines[Math.floor(Math.random() * praiseLines.length)];
+      praise.textContent = randomLine;
+    }
+  });
+</script>
+</body>
+</html>
