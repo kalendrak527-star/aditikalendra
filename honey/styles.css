@@ -1,0 +1,117 @@
+/* General page styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Heart shape using CSS */
+.heart {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: red;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -60px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 60px;
+}
+
+/* Heart animation */
+.heart:hover {
+  transform: rotate(-45deg) scale(1.1);
+}
+
+.heart:active {
+  transform: rotate(-45deg) scale(0.95);
+}
+
+/* Photo section */
+.photo {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin: 20px 0;
+}
+
+/* Praise text */
+.praise-text {
+  font-size: 1.4rem;
+  color: #4b2c20;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+button {
+  background-color: #ff4b5c;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff2a4b;
+  transform: scale(1.05);
+}
+
+/* Hidden love message */
+.love-message {
+  opacity: 0;
+  font-size: 2rem;
+  color: #e60073;
+  margin-top: 20px;
+  transform: scale(0.5);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Reveal animation */
+.love-message.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .photo {
+    width: 180px;
+  }
+  .praise-text {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
